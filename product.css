@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+
+.mt {
+    margin-top: 2em;
+}
+
+.px {
+    padding-inline: 2em;
+}
+
+.brown {
+color: #8E6447;
+}
+
+.product-section-1 {
+    background-image: url('/assets/images/product-hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.product-section-1 > h1 {
+    height: 50vh;
+color: white;
+}
+
+.d-flex {
+    display: flex;
+}
+
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.container {
+    padding-inline: 3em;
+}
+
+.carousel-btn > h2 {
+    background-color: red !important;
+
+    margin-inline: 0.2em;
+    padding: 0.6em;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.carousel {
+    margin-top: 2em;
+}
+
+.carousel-item {
+    background: #88B788;
+
+    border-radius: 10px;
+    padding-top: .5em;
+}
+
+.orange {
+    background: #F5C361 !important;
+
+}
+
+
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.promo-wrapper {
+    margin-top: 2em;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Four equal-width columns */
+    gap: 10px; /* Optional gap between columns */
+  }
+  
+  .grid-item {
+    padding-inline: 1em;
+    text-align: center;
+  }
+
+
+  .left {
+    width: 25%;
+    background-color: black;
+    color: white;
+  }
+
+  .right {
+    width: 70%;
+margin-left: 2em;
+  }
+
+  /* .wrapper {
+
+  } */
+
+  input {
+    height: 100%;
+    width: 100%;
+    padding: 1em;
+    border: 0; 
+    outline: none;
+  }
+
+
+  .card {
+    width: 30vw;
+    position: relative
+  }
+
+  .card-content {
+    background: white;
+    position: absolute;
+transform: translate(0, 190%);
+  }
+
+  .normal-price {
+    text-decoration: line-through;
+    color: red;
+  }
+
+  .button-buy {
+    width: 80%;
+  }
+
+  .card-btn-wrapper > button {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+/* 
+  .card-text {
+    position-absolute
+  } */
