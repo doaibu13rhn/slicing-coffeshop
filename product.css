@@ -3,7 +3,17 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Plus Jakarta Sans', sans-serif;
+}
 
+header {
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
 }
 
 .mt {
