@@ -315,8 +315,8 @@ input[type="checkbox"]:checked:after {
   top: -7px;
   background: none;
   pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  /* -webkit-appearance: none;
+  -moz-appearance: none; */
 }
 .input-slider .range-input input::-webkit-slider-thumb {
   height: 20px;
