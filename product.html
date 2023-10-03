@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Product</title>
     <link rel="stylesheet" href="product.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,231 +14,482 @@
   </head>
   <body>
     <header>
-      <div class="coffee-shop-logo">
-        <img src="/assets/webp/Frame.webp" alt="logo" />
-      </div>
-      <div class="coffee-shop-text">
-        <p style="color: white">Coffee Shop</p>
-      </div>
-      <div class="home-text">
-        <p style="color: white">Home</p>
-      </div>
-      <div class="product-text">
-        <p style="color: white">Product</p>
-      </div>
-      <div class="search-symbol">
-        <img src="/Search.png" alt="Search" />
-      </div>
-      <div class="cart-symbol">
-        <img src="/ShoppingCart (1).png" alt="cart1" />
-      </div>
-      <div class="sign-in">
-        <p style="color: white">Sign In</p>
-      </div>
-      <div class="sign-up">
-        <p style="color: black">Sign Up</p>
-      </div>
+      <nav class="sticky">
+        <div class="brand">
+          <img src="/assets/images/brand-white.png" alt="my-avatar" />
+          <ul class="nav-left">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Product</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <ul>
+            <li>
+              <a href="#"><img src="/assets/icon/Search.png" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="/assets/icon/ShoppingCart.png" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><button class="sign-in">Sign In</button></a>
+            </li>
+            <li>
+              <a href="#"><button class="sign-up">Sign Up</button></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main>
-      <div class="product-page">
-        <div class="product-section-1 d-flex justify-content-center">
-          <h1 class="d-flex align-items-center">
-            We Provide Good Coffee and Healthy Meals
-          </h1>
-        </div>
-        <div class="product-section-2">
+      <div class="hero-banner">
+        <div class="wrapper">
           <div class="container">
-            <div
-              class="promo-wrapper d-flex justify-content-between align-items-center"
-            >
-              <h1>Today <span class="brown">Promo</span></h1>
-              <div class="d-flex carousel-btn">
-                <h2>
-                  <img src="/assets/icon/arrow.png" class="w-50 h-50" alt="" />
-                </h2>
-                <h2>
-                  <img
-                    src="/assets/icon/arrow.png"
-                    class="w-50 h-50 rotate"
-                    alt=""
-                  />
-                </h2>
-              </div>
-            </div>
-          </div>
-          <div class="carousel">
-            <div class="grid-container">
-              <div class="carousel-item d-flex grid-item">
-                <img src="/assets/images/green-promo.png" alt="" />
-                <div class="d-flex flex-column justify-content-between">
-                  <div class="">
-                    <h5>HAPPY MOTHER'S DAY!</h5>
-                    <p>Get one of our favorite menu for free!</p>
-                  </div>
-                  <p>Klaim Kupon</p>
-                </div>
-              </div>
-              <div class="carousel-item d-flex grid-item">
-                <img src="/assets/images/green-promo.png" alt="" />
-                <div class="d-flex flex-column justify-content-between">
-                  <div class="">
-                    <h5>HAPPY MOTHER'S DAY!</h5>
-                    <p>Get one of our favorite menu for free!</p>
-                  </div>
-                  <p>Klaim Kupon</p>
-                </div>
-              </div>
-              <div class="carousel-item d-flex grid-item">
-                <img src="/assets/images/green-promo.png" alt="" />
-                <div class="d-flex flex-column justify-content-between">
-                  <div class="">
-                    <h5>HAPPY MOTHER'S DAY!</h5>
-                    <p>Get one of our favorite menu for free!</p>
-                  </div>
-                  <p>Klaim Kupon</p>
-                </div>
-              </div>
-              <div class="carousel-item orange d-flex grid-item">
-                <img src="/assets/images/orange-promo.png" alt="" />
-                <div class="d-flex flex-column justify-content-center">
-                  <div class="">
-                    <h5>Get a cup of coffee for free on sunday morning</h5>
-                    <p>Only at 7 to 9 AM</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container mt-2">
-            <h1>Our <span class="brown"> Product </span></h1>
-            <div class="wrapper mt-2">
-              <div class="left sticky pt-2 container rounded-pill">
-                <div class="d-flex justify-content-between white">
-                  <h2>Filter</h2>
-                  <h2>Reset Filter</h2>
-                </div>
-                <div class="search-bar mt-1">
-                  <h3>Search</h3>
-                  <input
-                    type="text"
-                    placeholder="Search Your Product"
-                    class="mt-1"
-                  />
-                </div>
-                <div class="">
-                  <h3 class="mt-1">Category</h3>
-                  <div class="">
-                    <ul class="cat item">
-                      <li>Favorite Product</li>
-                      <li>Coffee</li>
-                      <li>Non Coffee</li>
-                      <li>Foods</li>
-                      <li>Add-On</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="mt-2">
-                  <h3 class="">Sort By</h3>
-                  <div class="">
-                    <ul class="cat item">
-                      <li>Buy1get1</li>
-                      <li>Flash Sale</li>
-                      <li>Birthday Package</li>
-                      <li>Cheap</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="mt-2">
-                  <h3 class="">Range Price</h3>
-                  <div class="">
-                    <input
-                      type="range"
-                      id="volume"
-                      name="volume"
-                      min="0"
-                      max="11"
-                    />
-                  </div>
-                  <button class="w-100 py-1 rounded-pill mb-2">
-                    Apply Filter
-                  </button>
-                </div>
-              </div>
-              <div class="right">
-                <div class="d-flex">
-                  <div class="card" style="width: auto; height: 35em">
-                    <div class="img-product">
-                      <img src="/assets/images/product-1.png" alt="" class="" />
-                      <h4 class="flash">FLASH SALE!</h4>
-                    </div>
-                    <div class="card-content">
-                      <h2 class="title">Hazelnut Latte</h2>
-                      <div class="desc">
-                        <p class="mt-1">
-                          Lorem ipsum, dolor sit amet consectetur adipisicing
-                          elit. Cum quos vel explicabo. Magnam ullam quo ipsam
-                          architecto a molestias
-                        </p>
-                      </div>
-                      <img
-                        src="/assets/images/rating.png"
-                        alt=""
-                        class="mt-1"
-                      />
-                      <div class="price d-flex align-items-center">
-                        <p class="discount me-1">IDR 20.000</p>
-                        <h2>UDR 10.000</h2>
-                      </div>
-                      <div class="d-flex mt-1" style="height: 3em">
-                        <button class="w-100 me-1 btn rounded-pill">Buy</button>
-                        <img
-                          src="/assets/icons/ShoppingCart.png"
-                          class="cart rounded-pill"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card" style="width: auto; height: 35em">
-                    <div class="img-product">
-                      <img src="/assets/images/product-1.png" alt="" class="" />
-                      <h4 class="flash">FLASH SALE!</h4>
-                    </div>
-                    <div class="card-content">
-                      <h2 class="title">Hazelnut Latte</h2>
-                      <div class="desc">
-                        <p class="mt-1">
-                          Lorem ipsum, dolor sit amet consectetur adipisicing
-                          elit. Cum quos vel explicabo. Magnam ullam quo ipsam
-                          architecto a molestias
-                        </p>
-                      </div>
-                      <img
-                        src="/assets/images/rating.png"
-                        alt=""
-                        class="mt-1"
-                      />
-                      <div class="price d-flex align-items-center">
-                        <p class="discount me-1">IDR 20.000</p>
-                        <h2>UDR 10.000</h2>
-                      </div>
-                      <div class="d-flex mt-1" style="height: 3em">
-                        <button class="w-100 me-1 btn rounded-pill">Buy</button>
-                        <img
-                          src="/assets/icons/ShoppingCart.png"
-                          class="cart rounded-pill"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <section class="first">
+              <h2>We Provide Good Coffee and Healthy Meals</h2>
+            </section>
           </div>
         </div>
       </div>
+      <div class="mobile-only">
+        <div class="filter-mobile">
+          <div class="form-control">
+            <div><img src="/Public/svg/Search.svg" alt="iconsHumans" /></div>
+            <input
+              type="text"
+              id="fullName"
+              class="input-control"
+              placeholder="Find Product"
+            />
+          </div>
+          <div class="button-filter">
+            <img src="/Public/svg/Filter.png" alt="iconsHumans" />
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="container">
+          <section class="promo">
+            <h1>Today <span>Promo</span></h1>
+            <div class="arrow">
+              <button class="arrow-left">
+                <img src="/assets/icon/arrow-left.png" alt="arrow" />
+              </button>
+              <button class="arrow-right">
+                <img src="/assets/icon/arrow-right.png" alt="arrow" />
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="" style="width: 100%">
+          <!-- start kupon -->
+          <section class="kupon">
+            <div class="klaim">
+              <img src="/assets/images/orange-promo.png" alt="humans" />
+              <div class="text">
+                <p>
+                  <span>HAPPY MOTHER'S DAY!</span>
+                </p>
+                <p>Get one of our favorite menu for free!</p>
+                <p class="klaim-kupon">klaim kupon</p>
+              </div>
+            </div>
+            <div class="klaim">
+              <img src="/assets/images/orange-promo.png" alt="humans" />
+              <div class="text">
+                <p>
+                  <span>HAPPY MOTHER'S DAY!</span>
+                </p>
+                <p>Get one of our favorite menu for free!</p>
+                <p class="klaim-kupon">klaim kupon</p>
+              </div>
+            </div>
+            <div class="klaim">
+              <img src="/assets/images/orange-promo.png" alt="humans" />
+              <div class="text">
+                <p>
+                  <span>HAPPY MOTHER'S DAY!</span>
+                </p>
+                <p>Get one of our favorite menu for free!</p>
+                <p class="klaim-kupon">klaim kupon</p>
+              </div>
+            </div>
+            <div class="klaim">
+              <img src="/assets/images/orange-promo.png" alt="humans" />
+              <div class="text">
+                <p>
+                  <span>HAPPY MOTHER'S DAY!</span>
+                </p>
+                <p>Get one of our favorite menu for free!</p>
+                <p class="klaim-kupon">klaim kupon</p>
+              </div>
+            </div>
+          </section>
+          <!-- end  kupon -->
+          <div class="dot">
+            <button class="Rectangle"></button>
+            <button class="circle"></button>
+            <button class="circle"></button>
+            <button class="circle"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <!-- start header -->
+        <main class="container">
+          <!-- end header  -->
+
+          <h1 class="our-product">Our <span>Product</span></h1>
+          <!-- start product -->
+          <main class="product">
+            <aside class="filter desktop-only">
+              <div class="content-one">
+                <div class="one">
+                  <p>filter</p>
+                  <p>Reset Filter</p>
+                </div>
+                <div class="two">
+                  <label for="search">Search</label>
+                  <div class="input">
+                    <input
+                      type="text"
+                      id="search"
+                      placeholder="search Your Product"
+                    />
+                  </div>
+                </div>
+                <div class="three">
+                  <p class="category-title">Category</p>
+                  <div class="checkbox">
+                    <input type="checkbox" id="check" />
+                    <label for="check">Favorite Product</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="check" />
+                    <label for="check">Coffee</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="check" />
+                    <label for="check">Non Coffee</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="check" />
+                    <label for="check">Foods</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="check" />
+                    <label for="check">Add-On</label>
+                  </div>
+                </div>
+                <div class="four">
+                  <p class="category-title">Sort By</p>
+                  <div class="checkbox">
+                    <input type="checkbox" id="check" />
+                    <label for="check">Buy 1 get 1</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="check" />
+                    <label for="check">Flash sale</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="check" />
+                    <label for="check">Birthday Package</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="check" />
+                    <label for="check">Cheap</label>
+                  </div>
+                  <p class="category-title">Range Price</p>
+                  <div class="input-slider">
+                    <div class="range">
+                      <div class="range-slider">
+                        <span class="range-selected"></span>
+                      </div>
+                      <div class="range-input">
+                        <input
+                          type="range"
+                          class="min"
+                          min="0"
+                          max="1000"
+                          value="300"
+                          step="10"
+                        />
+                        <input
+                          type="range"
+                          class="max"
+                          min="0"
+                          max="1000"
+                          value="700"
+                          step="10"
+                        />
+                      </div>
+                      <div class="range-price">
+                        <label for="min">IDR</label>
+                        <input
+                          type="text"
+                          readonly
+                          name="min"
+                          value="300"
+                          class="range-output"
+                        />
+                        <label for="max">IDR</label>
+                        <input
+                          type="text"
+                          readonly
+                          name="max"
+                          value="700"
+                          class="range-output"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <button class="apply-btn">Apply Filter</button>
+                </div>
+              </div>
+            </aside>
+            <section>
+              <div class="category">
+                <div class="product-card">
+                  <div class="badge">FLASH SALE!</div>
+                  <div>
+                    <img
+                      src="/assets/images/product-1.png"
+                      alt="ice-blend"
+                      class="menu"
+                    />
+                  </div>
+                  <div class="desc-card">
+                    <div class="desc">
+                      <h3>Hazelnut Latte</h3>
+                      <p>
+                        You can explore the menu that we provide with fun and
+                        have their own taste and make your day better.
+                      </p>
+                      <h2>IDR 20.000</h2>
+                      <div class="buy">
+                        <button class="buy-one">Buy</button>
+                        <button class="market">
+                          <img
+                            src="/assets/icon/ShoppingCart-yellow.png"
+                            alt="icons-market"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="badge">FLASH SALE!</div>
+                  <div>
+                    <img
+                      src="/assets/images/product-2.png"
+                      alt="ice-blend"
+                      class="menu"
+                    />
+                  </div>
+                  <div class="desc-card">
+                    <div class="desc">
+                      <h3>Hajelnut Latte</h3>
+                      <p>
+                        You can explore the menu that we provide with fun and
+                        have their own taste and make your day better.
+                      </p>
+                      <h2>IDR 20.000</h2>
+                      <div class="buy">
+                        <button class="buy-one">Buy</button>
+                        <button class="market">
+                          <img
+                            src="/assets/icon/ShoppingCart-yellow.png"
+                            alt="icons-market"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="badge">FLASH SALE!</div>
+                  <div>
+                    <img
+                      src="/assets/images/product-3.png"
+                      alt="ice-blend"
+                      class="menu"
+                    />
+                  </div>
+                  <div class="desc-card">
+                    <div class="desc">
+                      <h3>Hajelnut Latte</h3>
+                      <p>
+                        You can explore the menu that we provide with fun and
+                        have their own taste and make your day better.
+                      </p>
+                      <h2>IDR 20.000</h2>
+                      <div class="buy">
+                        <button class="buy-one">Buy</button>
+                        <button class="market">
+                          <img
+                            src="/assets/icon/ShoppingCart-yellow.png"
+                            alt="icons-market"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="badge">FLASH SALE!</div>
+                  <div>
+                    <img
+                      src="/assets/images/product-4.png"
+                      alt="ice-blend"
+                      class="menu"
+                    />
+                  </div>
+                  <div class="desc-card">
+                    <div class="desc">
+                      <h3>Hajelnut Latte</h3>
+                      <p>
+                        You can explore the menu that we provide with fun and
+                        have their own taste and make your day better.
+                      </p>
+                      <h2>IDR 20.000</h2>
+                      <div class="buy">
+                        <button class="buy-one">Buy</button>
+                        <button class="market">
+                          <img
+                            src="/assets/icon/ShoppingCart-yellow.png"
+                            alt="icons-market"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="badge">FLASH SALE!</div>
+                  <div>
+                    <img
+                      src="/assets/images/product-3.png"
+                      alt="ice-blend"
+                      class="menu"
+                    />
+                  </div>
+                  <div class="desc-card">
+                    <div class="desc">
+                      <h3>Hajelnut Latte</h3>
+                      <p>
+                        You can explore the menu that we provide with fun and
+                        have their own taste and make your day better.
+                      </p>
+                      <h2>IDR 20.000</h2>
+                      <div class="buy">
+                        <button class="buy-one">Buy</button>
+                        <button class="market">
+                          <img
+                            src="/assets/icon/ShoppingCart-yellow.png"
+                            alt="icons-market"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="badge">FLASH SALE!</div>
+                  <div>
+                    <img
+                      src="/assets/images/product-4.png"
+                      alt="ice-blend"
+                      class="menu"
+                    />
+                  </div>
+                  <div class="desc-card">
+                    <div class="desc">
+                      <h3>Hajelnut Latte</h3>
+                      <p>
+                        You can explore the menu that we provide with fun and
+                        have their own taste and make your day better.
+                      </p>
+                      <h2>IDR 20.000</h2>
+                      <div class="buy">
+                        <button class="buy-one">Buy</button>
+                        <button class="market">
+                          <img
+                            src="/assets/icon/ShoppingCart-yellow.png"
+                            alt="icons-market"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn active">
+                  <img src="/assets/icon/arrow-right.png" alt="page" />
+                </button>
+              </div>
+            </section>
+          </main>
+        </main>
+        <!-- end product -->
+      </div>
     </main>
+    <footer class="footers wrapper">
+      <div class="container">
+        <div class="finish">
+          <section class="footer one">
+            <img src="assets/images/brand.png" alt="coffee" />
+            <p>
+              Coffee Shop is a store that sells some good meals, and especially
+              coffee. We provide high quality beans
+            </p>
+            <p class="copyright">©2020CoffeeStore</p>
+          </section>
+          <div style="display: flex; gap: 106px">
+            <section class="footer">
+              <h3>Product</h3>
+              <p>Our Product</p>
+              <p>Pricing</p>
+              <p>Locations</p>
+              <p>Countries</p>
+              <p>Blog</p>
+            </section>
+            <section class="footer">
+              <h3>Engage</h3>
+              <p>Partner</p>
+              <p>FAQ</p>
+              <p>About Us</p>
+              <p>Privacy Policy</p>
+              <p>Terms of Service</p>
+            </section>
+          </div>
+          <section class="footer">
+            <h3>Social Media</h3>
+            <div class="media">
+              <button>
+                <img src="/assets/icon/facebook-yellow.png" alt="facebook" />
+              </button>
+              <button>
+                <img src="/assets/icon/twitter-yellow.png" alt="twitter" />
+              </button>
+              <button>
+                <img src="/assets/icon/instagram-yellow.png" alt="instagram" />
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
