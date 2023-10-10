@@ -820,10 +820,9 @@
     </div>
   </body>
   <script>
-    // dropdown mobile
-    const burgerMenu = document.getElementById("burger-menu");
-    const dropdownMobile = document.getElementById("dropdown-mobile");
-    burgerMenu.addEventListener("click", (e) => {
+   const burgerMenu = document.querySelector("#burger-menu");
+    const dropdownMobile = document.querySelector("#dropdown-mobile");
+    burgerMenu.addEventListener("click", () => {
       dropdownMobile.classList.toggle("hidden");
     });
   </script>
