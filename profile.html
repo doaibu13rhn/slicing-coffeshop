@@ -3,164 +3,389 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Profile" />
     <title>Profile</title>
-    <link rel="stylesheet" href="profile.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Rubik&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              jakartans: "'Plus Jakarta Sans', sans-serif",
+            },
+            colors: {
+              primary: "#FF8906",
+              secondary: "#4F5665",
+              dark: "#0B132A",
+              light: "#ffff",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
     <header>
-      <nav class="sticky">
-        <div class="brand">
-          <img src="/assets/images/brand-white.png" alt="my-avatar" />
-          <ul class="nav-left">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Product</a>
-            </li>
-          </ul>
+      <nav
+        class="w-full flex justify-between py-4 px-5 items-center font-jakartans bg-dark border-b-[1px] border-b-[#E8E8E8] sm:px-5 md:px-24 lg:px-[130px]"
+      >
+        <div
+          class="nav-start flex items-center gap-[3rem] text-sm font-normal text-light"
+        >
+          <img src="/assets/images/brand-white.png" alt="logo" class="w-40" />
+          <a
+            href="/home.html"
+            class="hover:border-primary hover:border-b-2 hover:text-primary focus:border-b-2 focus:border-primary hidden lg:block"
+            >Home</a
+          >
+          <a
+            href="/product.html"
+            class="hover:border-primary hover:border-b-2 hover:text-primary focus:border-b-2 focus:border-primary hidden lg:block"
+            >Product</a
+          >
         </div>
-        <div class="nav-right">
-          <ul>
-            <li>
-              <a href="#"><img src="/assets/icon/Search.png" alt="" /></a>
-            </li>
-            <li>
-              <a href="#"><img src="/assets/icon/ShoppingCart.png" alt="" /></a>
-            </li>
-            <li>
-              <a href="#"><button class="sign-in">Sign In</button></a>
-            </li>
-            <li>
-              <a href="#"><button class="sign-up">Sign Up</button></a>
-            </li>
-          </ul>
+        <div class="nav-end flex gap-x-[22px] items-center">
+          <div class="icon-search hidden lg:block">
+            <img src="/assets/icon/Search.png" alt="Search" />
+          </div>
+          <a
+            href="/checkout.html  "
+            class="hidden lg:block hover:border-primary hover:border-b-2"
+          >
+            <img
+              src="/assets/icon/ShoppingCart.png"
+              alt="ShoppingCart"
+              class="w-full h-full"
+            />
+          </a>
+          <button
+            id="dropdownUserAvatarButton"
+            data-dropdown-toggle="dropdownAvatar"
+            class="flex mx-3 hidden lg:block text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            type="button"
+          >
+            <span class="sr-only">Open user menu</span>
+            <img
+              class="w-8 h-8 rounded-full"
+              src="/assets/icon/user-profile.png"
+              alt="user photo"
+            />
+          </button>
+
+          <!-- Dropdown menu -->
+          <div
+            id="dropdownAvatar"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+          >
+            <ul
+              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="dropdownUserAvatarButton"
+            >
+              <li>
+                <a
+                  href="/checkout.html"
+                  class="block px-4 py-2 hover:bg-primary dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Checkout</a
+                >
+              </li>
+            </ul>
+            <div class="py-2">
+              <a
+                href="#"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                >Sign out</a
+              >
+            </div>
+          </div>
+          <div class="lg:hidden">
+            <img
+              src="/assets/icon/ShoppingCart.png"
+              alt="shopping-cart"
+              class="w-full h-full"
+            />
+          </div>
+          <div class="lg:hidden" id="burger-menu">
+            <img
+              src="/assets/icon/hamburger.png"
+              alt="burger-menu-dark"
+              id="burger-menu"
+              class="w-full h-full"
+            />
+          </div>
         </div>
       </nav>
+      <nav
+        id="dropdown-mobile"
+        class="w-full h-full font-jakartans py-4 px-5 border-b-[1px] border-b-[#E8E8E8] hidden lg:hidden"
+      >
+        <ul class="flex flex-col gap-y-2">
+          <li class="p-1 hover:bg-primary hover:font-medium">
+            <a href="/profile.html">Profile</a>
+          </li>
+          <li class="p-1 hover:bg-primary hover:font-medium">
+            <a href="/home.html">Home</a>
+          </li>
+          <li class="p-1 hover:bg-primary hover:font-medium">
+            <a href="/product.html">Product</a>
+          </li>
+          <li class="p-1 hover:bg-primary hover:font-medium">
+            <a href="/checkout.html">Cart</a>
+          </li>
+          <li class="p-1 hover:bg-primary hover:font-medium">
+            <a href="/order-history.html">History Order</a>
+          </li>
+          <li class="p-1 hover:bg-primary hover:font-medium">
+            <button onclick="showLogoutModal()">Logout</button>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <main>
-      <div class="register-page">
-        <div class="left-side">
-          <div class="left">
-            <div class="">
-              <h3>Ghaluh Wizard</h3>
-              <h5 style="opacity: 50%">ghaluhwizz@gmail.com</h5>
-            </div>
-            <div class="" style="margin-top: 6rem">
-              <button class="btn-profile">Upload new profile</button>
-              <p>Since 20 January 2022</p>
+    <section class="pt-10 pb-7 px-5 md:px-24 lg:px-[130px]">
+      <h1
+        class="font-jakartans text-2xl font-medium text-[#0B0909] lg:text-5xl"
+      >
+        Profile
+      </h1>
+    </section>
+    <main
+      class="font-jakartans px-5 md:px-24 lg:px-[130px] flex flex-col gap-y-5 lg:flex-row lg:gap-x-5"
+    >
+      <section
+        class="border border-[#E8E8E8] rounded-md py-3.5 px-12 flex flex-col gap-y-4 items-center h-full lg:w-1/3"
+      >
+        <span class="text-lg font-medium text-dark lg:text-xl"
+          >Ghaluh Wizard</span
+        >
+        <span class="text-sm font-normal text-secondary lg:text-base"
+          >ghaluhwizz@gmail.com</span
+        >
+        <img
+          src="/assets/icon/user-profile.png"
+          alt="user-image"
+          class="w-20 h-20 rounded-full"
+        />
+        <button
+          type="button"
+          class="text-sm font-medium text-dark py-3 px-5 bg-primary hover:bg-amber-600 rounded-md w-full lg:text-xs xl:text-sm active:ring active:ring-orange-300"
+        >
+          Upload New Photo
+        </button>
+        <span class="text-base font-normal text-secondary lg:text-xs xl:text-sm"
+          >Since <span class="font-medium">20 January 2022</span></span
+        >
+      </section>
+      <section
+        class="border border-[#E8E8E8] rounded-md py-4 px-2.5 md:py-6 md:px-12 lg:w-2/3"
+      >
+        <form action="" class="flex flex-col gap-y-3">
+          <div class="flex flex-col gap-y-3">
+            <label
+              for="fullname"
+              class="text-sm font-semibold text-dark lg:text-base"
+              >Full Name</label
+            >
+            <div
+              class="flex gap-y-3 border rounded-lg text-xs tracking-wide focus:border-primary w-full"
+            >
+              <img
+                src="/assets/icon/Profile.png"
+                alt="mail.svg"
+                class="p-2 border-none"
+              />
+              <input
+                type="fullname"
+                id="fullname"
+                placeholder="Enter Your Full Name"
+                class="py-3 px-2 w-full"
+              />
             </div>
           </div>
-        </div>
-        <div class="right-side">
-          <div class="right">
-            <form action="">
-              <div class="regist-info">
-                <label for="">Full Name</label>
-              </div>
-              <div class="input-wrapper">
-                <img class="input-icon" src="/assets/icon/Profile.png" alt="" />
-                <input type="text" placeholder="Enter your full name" />
-              </div>
-              <div class="regist-info">
-                <label for="">Email</label>
-              </div>
-              <div class="input-wrapper">
-                <img class="input-icon" src="/assets/icon/message.png" alt="" />
-                <input type="text" placeholder="Enter your Email" />
-              </div>
-              <div class="regist-info">
-                <label for="">Phone number</label>
-              </div>
-              <div class="input-wrapper">
-                <img
-                  class="input-icon"
-                  src="/assets/icon/PhoneCall.png"
-                  alt=""
-                />
-                <input type="text" placeholder="082116304338" />
-              </div>
-              <div class="regist-info">
-                <label for="">Password</label>
-              </div>
-              <div class="input-wrapper">
-                <img
-                  class="input-icon"
-                  src="/assets/icon/Password.png"
-                  alt=""
-                />
-                <input type="text" placeholder="Enter your Password" />
-              </div>
-              <div class="regist-info">
-                <label for="">Address</label>
-              </div>
-              <div class="input-wrapper">
-                <img
-                  class="input-icon"
-                  src="/assets/icon/Location.png"
-                  alt=""
-                />
-                <input type="text" placeholder="Griya Bandung Indah" />
-              </div>
-              <a href="login.html">
-                <button class="login-btn">Submit</button>
-              </a>
-            </form>
+          <div class="flex flex-col gap-y-3 relative">
+            <label
+              for="Email"
+              class="text-sm font-semibold text-dark lg:text-base"
+              >Email</label
+            >
+            <div
+              class="flex gap-y-3 border rounded-lg text-xs tracking-wide focus:border-primary w-full"
+            >
+              <img
+                src="/assets/icon/message.png"
+                alt="mail.svg"
+                class="p-3 border-none"
+              />
+              <input
+                type="address"
+                id="address"
+                placeholder="ghaluhwizz@gmail.com"
+                class="py-3 px-2 w-full"
+              />
+            </div>
           </div>
-        </div>
-      </div>
+          <div class="flex flex-col gap-y-3 relative">
+            <label
+              for="PhoneNumber"
+              class="text-sm font-semibold text-dark lg:text-base"
+              >Phone</label
+            >
+            <div
+              class="flex gap-y-3 border rounded-lg text-xs tracking-wide focus:border-primary w-full"
+            >
+              <img
+                src="/assets/icon/PhoneCall.png"
+                alt="mail.svg"
+                class="p-3 border-none"
+              />
+              <input
+                type="number"
+                id="Phone"
+                placeholder="082116304338"
+                class="py-3 px-2 w-full"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col gap-y-3 relative">
+            <label
+              for="password"
+              class="text-sm font-semibold text-dark lg:text-base"
+              >Password</label
+            >
+            <div
+              class="flex gap-y-3 border rounded-lg text-xs tracking-wide focus:border-primary w-full"
+            >
+              <img
+                src="/assets/icon/Password.png"
+                alt="mail.svg"
+                class="p-3 border-none"
+              />
+              <input
+                type="text"
+                id="Phone"
+                placeholder="Type your password"
+                class="py-3 px-2 w-full"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col gap-y-3 relative mb-5">
+            <label
+              for="address"
+              class="text-sm font-semibold text-dark lg:text-base"
+              >Address</label
+            >
+            <div
+              class="flex gap-y-3 border rounded-lg text-xs tracking-wide focus:border-primary w-full"
+            >
+              <img
+                src="/assets/icon/Location.png"
+                alt="mail.svg"
+                class="p-3 border-none"
+              />
+              <input
+                type="address"
+                id="address"
+                placeholder="Enter Your Address"
+                class="py-3 px-2 w-full"
+              />
+            </div>
+          </div>
+        </form>
+        <button
+          type="button"
+          class="text-sm font-medium text-dark py-3 px-5 bg-primary hover:bg-amber-600 rounded-md w-full lg:text-xs xl:text-sm active:ring active:ring-orange-300"
+        >
+          Submit
+        </button>
+      </section>
     </main>
-    <footer class="footers wrapper">
-      <div class="container">
-        <div class="finish">
-          <section class="footer one">
-            <img src="assets/images/brand.png" alt="coffee" />
-            <p>
-              Coffee Shop is a store that sells some good meals, and especially
-              coffee. We provide high quality beans
-            </p>
-            <p class="copyright">©2020CoffeeStore</p>
-          </section>
-          <div style="display: flex; gap: 106px">
-            <section class="footer">
-              <h3>Product</h3>
-              <p>Our Product</p>
-              <p>Pricing</p>
-              <p>Locations</p>
-              <p>Countries</p>
-              <p>Blog</p>
-            </section>
-            <section class="footer">
-              <h3>Engage</h3>
-              <p>Partner</p>
-              <p>FAQ</p>
-              <p>About Us</p>
-              <p>Privacy Policy</p>
-              <p>Terms of Service</p>
-            </section>
-          </div>
-          <section class="footer">
-            <h3>Social Media</h3>
-            <div class="media">
-              <button>
-                <img src="/assets/icon/facebook-yellow.png" alt="facebook" />
-              </button>
-              <button>
-                <img src="/assets/icon/twitter-yellow.png" alt="twitter" />
-              </button>
-              <button>
-                <img src="/assets/icon/instagram-yellow.png" alt="instagram" />
-              </button>
-            </div>
-          </section>
-        </div>
+    <footer
+      class="font-jakartans p-5 mt-5 flex flex-wrap gap-y-8 sm:px-5 md:px-24 pt md:pt-10 md:pb-20 md:mt-10 lg:px-[130px]"
+    >
+      <section
+        class="flex flex-col gap-y-6 w-full lg:self-end lg:w-2/5 lg:pr-16"
+      >
+        <img src="/assets/images/brand.png" alt="logo" class="w-32 h-8" />
+        <span class="text-base font-normal text-secondary">
+          Coffee Shop is a store that sells some good meals, and especially
+          coffee. We provide high quality beans
+        </span>
+        <span class="font-rubik text-base font-semibold text-dark"
+          >&copy;2020CoffeeStore</span
+        >
+      </section>
+      <div class="mid flex gap-x-[7rem] md:h-2 md:w-auto">
+        <section
+          class="flex flex-col gap-y-5 w-full sm:w-1/3 md:auto lg:w-auto"
+        >
+          <p class="text-base font-medium text-dark">Product</p>
+          <p class="text-sm font-normal text-secondary">Our Product</p>
+          <p class="text-sm font-normal text-secondary">Pricing</p>
+          <p class="text-sm font-normal text-secondary">Locations</p>
+          <p class="text-sm font-normal text-secondary">Countries</p>
+          <p class="text-sm font-normal text-secondary">Blog</p>
+        </section>
+        <section
+          class="flex flex-col gap-y-5 w-full sm:w-1/3 md:auto lg:w-auto"
+        >
+          <p class="text-base font-medium text-dark">Engage</p>
+          <p class="text-sm font-normal text-secondary">Partner</p>
+          <p class="text-sm font-normal text-secondary">FAQ</p>
+          <p class="text-sm font-normal text-secondary">About Us</p>
+          <p class="text-sm font-normal text-secondary">Provice Policy</p>
+          <p class="text-sm font-normal text-secondary">Term of Services</p>
+        </section>
       </div>
+      <section
+        class="social-media w-full sm:w-1/3 md:auto lg:w-auto lg:ms-[4rem]"
+      >
+        <p class="text-base font-medium text-dark mb-4">Social Media</p>
+        <div class="flex gap-5">
+          <div>
+            <img
+              src="/assets/icon/facebook-yellow.png"
+              alt="Facebook"
+              class="shadow-xl"
+            />
+          </div>
+          <div>
+            <img
+              src="/assets/icon/twitter-yellow.png"
+              alt="Twitter"
+              class="shadow-xl"
+            />
+          </div>
+          <div>
+            <img
+              src="/assets/icon/instagram-yellow.png"
+              alt="Instagram"
+              class="shadow-xl"
+            />
+          </div>
+        </div>
+      </section>
     </footer>
   </body>
+  <script>
+    // dropdown
+
+    const burgerMenu = document.querySelector("#burger-menu");
+    const dropdownMobile = document.querySelector("#dropdown-mobile");
+    burgerMenu.addEventListener("click", (e) => {
+      dropdownMobile.classList.toggle("hidden");
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 </html>

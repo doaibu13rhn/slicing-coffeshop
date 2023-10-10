@@ -3,374 +3,591 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Profile" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Home</title>
-    <link rel="stylesheet" href="home.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Rubik&display=swap"
       rel="stylesheet"
     />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              jakartans: "'Plus Jakarta Sans', sans-serif",
+            },
+            colors: {
+              primary: "#FF8906",
+              secondary: "#4F5665",
+              dark: "#0B132A",
+              light: "#ffff",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .header-section {
+        background: linear-gradient(168deg, #777c82 -114.74%, #0b0909 91.35%);
+      }
+    </style>
+    <title>Home</title>
   </head>
   <body>
     <header>
-      <nav class="sticky">
-        <div class="brand">
-          <img src="/assets/images/brand-white.png" alt="my-avatar" />
-          <ul class="nav-left">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="/product.html">Product</a>
-            </li>
-          </ul>
+      <nav
+        class="w-full flex justify-between py-4 px-5 items-center font-jakartans bg-[#0B0909] md:px-24 lg:px-[130px]"
+      >
+        <div
+          class="nav-start flex items-center gap-x-[60px] text-sm font-normal"
+        >
+          <img
+            src="/assets/images/brand-white.png"
+            alt="logo"
+            class="w-32 h-8"
+          />
+          <a
+            href="#"
+            class="text-light hover:border-b-2 border-primary hover:text-primary border-b-2 hidden lg:block"
+            >Home</a
+          >
+          <a
+            href="/product.html"
+            class="text-light hover:border-b-2 hover:border-primary hover:text-primary focus:border-b-2 focus:border-primary hidden lg:block"
+            >Product</a
+          >
         </div>
-        <div class="nav-right">
-          <ul>
-            <li>
-              <a href="#"><img src="/assets/icon/Search.png" alt="" /></a>
-            </li>
-            <li>
-              <a href="#"><img src="/assets/icon/ShoppingCart.png" alt="" /></a>
-            </li>
-            <li>
-              <a href="#"><button class="sign-in">Sign In</button></a>
-            </li>
-            <li>
-              <a href="#"><button class="sign-up">Sign Up</button></a>
-            </li>
-          </ul>
+        <div class="nav-end flex gap-x-[22px] items-center">
+          <a href="#" class="icon-search hidden lg:block">
+            <img src="/assets/icon/Search.png" alt="Search" class="" />
+          </a>
+          <a href="#" class="hidden lg:block">
+            <img
+              src="/assets/icon/ShoppingCart.png"
+              alt="ShoppingCart"
+              class="w-full h-full"
+            />
+          </a>
+          <a
+            href="/login.html"
+            class="text-light text-sm font-medium py-3 px-[18px] border border-[#ebeaea] hover:bg-light hover:text-dark rounded-md hidden lg:block active:ring active:ring-slate-300"
+          >
+            Sign In
+          </a>
+          <a
+            href="/register.html"
+            class="text-dark text-sm font-medium py-3 px-[18px] bg-primary hover:bg-amber-600 rounded-md hidden lg:block active:ring active:ring-orange-300"
+          >
+            Sign Up
+          </a>
+          <div class="text-2xl lg:hidden" id="burger-menu">
+            <img
+              src="/assets/icon/hamburger.png"
+              alt="burger-menu"
+              id="burger-menu"
+              class="w-full h-full"
+            />
+          </div>
         </div>
       </nav>
+      <nav
+        id="dropdown-mobile"
+        class="w-full h-full bg-primary font-jakartans py-4 px-5 border-b-[1px] border-b-[#E8E8E8] hidden md:px-24 lg:hidden"
+      >
+        <ul class="flex flex-col gap-y-2">
+          <li class="p-1 hover:bg-primary hover:font-medium text-center">
+            <a href="/home.html">Home</a>
+          </li>
+          <li class="p-1 hover:bg-primary hover:font-medium text-center">
+            <a href="/product.html">Product</a>
+          </li>
+          <li class="p-1 hover:bg-primary hover:font-medium text-center">
+            <a href="#">Search</a>
+          </li>
+          <li class="p-1 hover:bg-primary hover:font-medium text-center">
+            <a href="/checkout.html">Cart</a>
+          </li>
+          <li class="p-1 hover:bg-primary hover:font-medium text-center">
+            <a href="/login.html">Sign In</a>
+          </li>
+          <li class="p-1 hover:bg-primary hover:font-medium text-center">
+            <a href="/register.html">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <main>
-      <!-- section 1 -->
-      <div class="content-section-1">
-        <div class="section-1-left">
-          <div class="content-1-left">
-            <h2 style="color: white; font-size: 2rem">
-              Start Your Day with <br />Coffee and Good <br />
-              Meals
-            </h2>
-            <p style="color: white; margin-top: 1rem">
-              We provide high quality beans, good taste, and healthy meals
-              <br />
-              made by love just for you. Start your day with us for a bigger
-              smile!
-            </p>
-            <button class="sign-up" style="margin-top: 1rem">
-              Get started
-            </button>
-            <div class="values-1">
-              <div class="staff">
-                <h1>90+</h1>
-                <h3>Staff</h3>
-              </div>
-              <div class="Stores">
-                <h1>30+</h1>
-                <h3>Stores</h3>
-              </div>
-              <div class="customer">
-                <h1>800+</h1>
-                <h3>Customer</h3>
-              </div>
-            </div>
+    <section class="flex flex-wrap font-jakartans">
+      <div
+        class="w-full h-screen select-none flex items-center py-4 px-5 md:px-24 lg:px-[130px] xl:h-[1024px] xl:w-1/2 header-section"
+      >
+        <article class="flex flex-col gap-y-6 items-baseline relative">
+          <h1
+            class="text-light text-2xl font-medium leading-tight md:text-5xl md:leading-snug"
+          >
+            Start Your Day with Coffee and Good Meals
+          </h1>
+          <span class="text-sm font-normal text-light md:text-base">
+            We provide high quality beans, good taste, and healthy meals made by
+            love just for you. Start your day with us for a bigger smile!
+          </span>
+          <a
+            href="#"
+            class="text-sm font-medium text-dark p-[10px] bg-primary rounded-md w-[143px] h-[50px] flex items-center justify-center hover:bg-amber-600 active:ring active:ring-orange-300"
+            >Get Started</a
+          >
+          <div class="flex justify-between self-stretch">
+            <span class="flex flex-col gap-y-3"
+              ><p class="text-2xl font-medium text-primary md:text-5xl">90+</p>
+              <p class="text-xs font-normal text-light md:text-base">
+                Staff
+              </p></span
+            >
+            <div class="w-[2px] h-18 bg-light md:h-20"></div>
+            <span class="flex flex-col gap-y-3"
+              ><p class="text-2xl font-medium text-primary md:text-5xl">30+</p>
+              <p class="text-xs font-normal text-light md:text-base">
+                Stores
+              </p></span
+            >
+            <div class="w-[2px] h-18 bg-light md:h-20"></div>
+            <span class="flex flex-col gap-y-3"
+              ><p class="text-2xl font-medium text-primary md:text-5xl">800+</p>
+              <p class="text-xs font-normal text-light md:text-base">
+                Customer
+              </p></span
+            >
           </div>
-        </div>
-        <div class="section-1-right">
-          <img src="/assets/images/home-section-1.png" alt="" />
+          <div
+            class="absolute bottom-20 right-0 p-3 bg-primary rounded-full md:bottom-[100px] xl:hidden"
+          >
+            <img
+              src="/assets/icon/ChatCircleDots.png"
+              alt="ChatCircleDots"
+              class="w-8 h-8"
+            />
+          </div>
+        </article>
+      </div>
+      <div
+        class="bg-[url('/assets/images/home-section-1.png')] h-[1024px] relative hidden xl:w-1/2 xl:block"
+      >
+        <div class="absolute bottom-24 right-24 p-3 bg-primary rounded-full">
+          <img
+            src="/assets/icon/ChatCircleDots.png"
+            alt="ChatCircleDots"
+            class="max-w-full max-h-full"
+          />
         </div>
       </div>
-      <!-- section 1 end -->
-
-      <!-- section 2 -->
-      <div class="content-section-2">
-        <div class="section-2-left">
-          <div class="content-2-left">
-            <h2 style="margin-bottom: 1rem; font-weight: 50px; font-size: 3rem">
-              We Provide Good<br />
-              Coffe and healthy <br />
-              meals
-            </h2>
-            <p>
-              You can explore the menu that we provide with fun and have their
-              own taste and make your day better.
-            </p>
-            <div class="list">
-              <img src="/assets/icon/checklist.png" alt="" />
-              <p>High quality beans</p>
-            </div>
-            <div class="list">
-              <img src="/assets/icon/checklist.png" alt="" />
-              <p>Healthy meals, you can request the ingredients</p>
-            </div>
-            <div class="list">
-              <img src="/assets/icon/checklist.png" alt="" />
-              <p>Chat with our staff to get better experience for ordering</p>
-            </div>
-            <div class="list">
-              <img src="/assets/icon/checklist.png" alt="" />
-              <p>Free member card with a minimum purchase of IDR 200.000.</p>
-            </div>
-          </div>
-        </div>
-        <div class="section-2-right">
-          <img src="/assets/images/home-section-2.png" alt="" />
-        </div>
-      </div>
-      <!-- section 2 end -->
-
-      <!-- section 3 -->
-      <div class="content-section-3">
-        <div class="section-3">
-          <div class="section-3-head">
-            <h1 style="margin-bottom: 1rem">Here is People's Favourite</h1>
-            <hr />
-            <p style="margin-top: 1rem">
-              Let's choose and have a bit taste of poeple's favorite. It might
-              be yours too!
-            </p>
-          </div>
-          <div class="product">
-            <div class="main-product">
-              <div class="">
-                <img
-                  src="/assets/images/product-1.png"
-                  alt="product_photo"
-                  style="height: 300px; width: 280px"
-                />
-              </div>
-              <div class="info">
-                <div class="Title">
-                  <h1>Hazelnut latte</h1>
-                </div>
-                <div class="desc">
-                  <p>
-                    You can explore the menu that we provide with fun and have
-                    their own taste and make your day better.
-                  </p>
-                </div>
-                <div class="idr">
-                  <h3>IDR 20.000</h3>
-                </div>
-                <div class="buy-option">
-                  <button class="btn-buy">Buy</button>
-
-                  <button class="btn-cart">
-                    <img
-                      src="/assets/icon/ShoppingCart-yellow.png"
-                      alt="cart"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="main-product">
-              <div class="">
-                <img
-                  src="/assets/images/product-2.png"
-                  alt="product_photo"
-                  style="height: 300px; width: 280px"
-                />
-              </div>
-              <div class="info">
-                <div class="Title">
-                  <h1>Hazelnut latte</h1>
-                </div>
-                <div class="desc">
-                  <p>
-                    You can explore the menu that we provide with fun and have
-                    their own taste and make your day better.
-                  </p>
-                </div>
-                <div class="idr">
-                  <h3>IDR 20.000</h3>
-                </div>
-                <div class="buy-option">
-                  <button class="btn-buy">Buy</button>
-
-                  <button class="btn-cart">
-                    <img
-                      src="/assets/icon/ShoppingCart-yellow.png"
-                      alt="cart"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="main-product">
-              <div class="">
-                <img
-                  src="/assets/images/product-3.png"
-                  alt="product_photo"
-                  style="height: 300px; width: 280px"
-                />
-              </div>
-              <div class="info">
-                <div class="Title">
-                  <h1>Hazelnut latte</h1>
-                </div>
-                <div class="desc">
-                  <p>
-                    You can explore the menu that we provide with fun and have
-                    their own taste and make your day better.
-                  </p>
-                </div>
-                <div class="idr">
-                  <h3>IDR 20.000</h3>
-                </div>
-                <div class="buy-option">
-                  <button class="btn-buy">Buy</button>
-
-                  <button class="btn-cart">
-                    <img
-                      src="/assets/icon/ShoppingCart-yellow.png"
-                      alt="cart"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="main-product">
-              <div class="">
-                <img
-                  src="/assets/images/product-4.png"
-                  alt="product_photo"
-                  style="height: 300px; width: 280px"
-                />
-              </div>
-              <div class="info">
-                <div class="Title">
-                  <h1>Hazelnut latte</h1>
-                </div>
-                <div class="desc">
-                  <p>
-                    You can explore the menu that we provide with fun and have
-                    their own taste and make your day better.
-                  </p>
-                </div>
-                <div class="idr">
-                  <h3>IDR 20.000</h3>
-                </div>
-                <div class="buy-option">
-                  <button class="btn-buy">Buy</button>
-
-                  <button class="btn-cart">
-                    <img
-                      src="/assets/icon/ShoppingCart-yellow.png"
-                      alt="cart"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- section 3 end -->
-
-      <!-- section 4 -->
-      <div class="content-section-4">
-        <div class="section-4">
-          <div class="section-4-head">
-            <h1 style="margin-bottom: 2rem">
-              Visit Our Store in the Spot on the Map Below
+      <div
+        class="w-full h-screen flex items-center py-4 px-5 md:px-24 lg:px-[130px] xl:h-[574px] xl:w-1/2"
+      >
+        <article class="flex flex-col gap-y-6">
+          <div class="flex gap-x-6 items-center flex-col gap-y-4 xl:flex-row">
+            <div class="hidden bg-primary md:w-4 h-16 xl:block"></div>
+            <h1
+              class="text-2xl font-medium leading-tight text-dark text-center md:text-5xl xl:text-left"
+            >
+              We Provide <span class="text-[#8E6447]">Good Coffee</span> and
+              <span class="text-[#8E6447]">Healthy Meals</span>
             </h1>
-            <hr />
-            <p style="margin: 1rem">
+            <div class="bg-primary w-12 h-1 lg:w-16 lg:h-2 xl:hidden"></div>
+          </div>
+          <span
+            class="text-sm font-normal text-secondary text-center md:text-base xl:text-left"
+            >You can explore the menu that we provide with fun and have their
+            own taste and make your day better.</span
+          >
+          <div class="flex flex-col gap-y-6">
+            <div class="flex items-center gap-x-[10px]">
+              <div>
+                <img
+                  src="/assets/icon/checklist.png"
+                  alt="check"
+                  class="w-full h-full"
+                />
+              </div>
+              <span class="text-sm font-normal text-secondary"
+                >High quality beans</span
+              >
+            </div>
+            <div class="flex items-center gap-x-[10px]">
+              <div>
+                <img
+                  src="/assets/icon/checklist.png"
+                  alt="check"
+                  class="w-full h-full"
+                />
+              </div>
+              <span class="text-sm font-normal text-secondary"
+                >Healthy meals, you can request the ingredients</span
+              >
+            </div>
+            <div class="flex items-center gap-x-[10px]">
+              <div>
+                <img
+                  src="/assets/icon/checklist.png"
+                  alt="check"
+                  class="w-full h-full"
+                />
+              </div>
+              <span class="text-sm font-normal text-secondary"
+                >Chat with our staff to get better experience for ordering</span
+              >
+            </div>
+            <div class="flex items-center gap-x-[10px]">
+              <div>
+                <img
+                  src="/assets/icon/checklist.png"
+                  alt="check"
+                  class="w-full h-full"
+                />
+              </div>
+              <span class="text-sm font-normal text-secondary"
+                >Free member card with a minimum purchase of IDR 200.000.</span
+              >
+            </div>
+          </div>
+        </article>
+      </div>
+      <div
+        class="bg-[url('/assets/images/home-section-2.png')] h-[574px] hidden xl:block xl:w-1/2"
+      ></div>
+    </section>
+    <main class="font-jakartans px-5 md:px-24 lg:py-20 lg:px-[130px]">
+      <div class="items-center text-center flex flex-col gap-y-5">
+        <h1 class="text-2xl font-medium text-dark md:text-5xl">
+          Here is People's <span class="text-[#8E6447]">Favorite</span>
+        </h1>
+        <div class="bg-primary w-12 h-1 lg:w-16 lg:h-2"></div>
+        <span class="text-sm font-normal text-secondary md:text-base"
+          >Let’s choose and have a bit taste of poeple’s favorite. It might be
+          yours too!</span
+        >
+      </div>
+      <div
+        class="mt-6 flex flex-col gap-y-6 md:flex-row md:flex-wrap md:justify-between xl:flex-nowrap xl:gap-x-5"
+      >
+        <div class="flex flex-col items-center md:w-[48%] xl:w-full">
+          <img
+            src="/assets/images/product-1.png"
+            alt="product"
+            class="w-full h-full"
+          />
+          <div
+            class="w-[95%] flex flex-col gap-y-3 p-[10px] bg-light drop-shadow-md relative bottom-16"
+          >
+            <span class="text-xl font-medium text-dark lg:text-[22px]"
+              >Hazelnut Latte</span
+            >
+            <p class="text-sm font-normal text-dark">
               You can explore the menu that we provide with fun and have their
               own taste and make your day better.
             </p>
-            <img src="/assets/images/map.png" alt="" />
-          </div>
-        </div>
-      </div>
-      <!-- section 4 end -->
-
-      <!-- section 5 -->
-      <div class="content-section-5">
-        <main class="wrapper profile-cover">
-          <div class="container">
-            <div class="profile">
-              <img src="/assets/images/testimonial-section.png" alt="profile" />
-              <section>
-                <h3>TESTIMONIAL</h3>
-                <div class="name-profile">
-                  <div class="border-y"></div>
-                  <h1>Viezh Robert</h1>
-                </div>
-                <h4>Manager Coffee Shop</h4>
-                <p>
-                  “Wow... I am very happy to spend my whole day here. the Wi-fi
-                  is good, and the coffee and meals tho. I like it here!! Very
-                  recommended!
-                </p>
-                <div class="rating">
-                  <div><img src="/assets/icon/stars.png" alt="" /></div>
-                </div>
-                <div class="arrow">
-                  <img src="/assets/icon/arrow-left.png" alt="arrow" />
-                  <img src="/assets/icon/arrow-right.png" alt="arrow" />
-                </div>
-                <div class="btn-testi">
-                  <button class="rectangle"></button>
-                  <button class="circle"></button>
-                  <button class="circle"></button>
-                  <button class="circle"></button>
-                </div>
-              </section>
-            </div>
-          </div>
-        </main>
-      </div>
-      <!-- section 5 end -->
-    </main>
-    <footer class="footers wrapper">
-      <div class="container">
-        <div class="finish">
-          <section class="footer one">
-            <img src="assets/images/brand.png" alt="coffee" />
-            <p>
-              Coffee Shop is a store that sells some good meals, and especially
-              coffee. We provide high quality beans
+            <p class="text-lg font-medium text-dark lg:text-[22px]">
+              IDR 20.000
             </p>
-            <p class="copyright">©2020CoffeeStore</p>
-          </section>
-          <div style="display: flex; gap: 106px">
-            <section class="footer">
-              <h3>Product</h3>
-              <p>Our Product</p>
-              <p>Pricing</p>
-              <p>Locations</p>
-              <p>Countries</p>
-              <p>Blog</p>
-            </section>
-            <section class="footer">
-              <h3>Engage</h3>
-              <p>Partner</p>
-              <p>FAQ</p>
-              <p>About Us</p>
-              <p>Privacy Policy</p>
-              <p>Terms of Service</p>
-            </section>
-          </div>
-          <section class="footer">
-            <h3>Social Media</h3>
-            <div class="media">
-              <button>
-                <img src="/assets/icon/facebook-yellow.png" alt="facebook" />
+            <div
+              class="flex flex-col gap-y-2 md:flex-row md:justify-between md:gap-x-2"
+            >
+              <button
+                type="button"
+                class="text-base font-medium text-dark bg-primary p-2 rounded-md hover:bg-amber-600 active:ring active:ring-orange-300 md:w-3/4"
+              >
+                Buy
               </button>
-              <button>
-                <img src="/assets/icon/twitter-yellow.png" alt="twitter" />
-              </button>
-              <button>
-                <img src="/assets/icon/instagram-yellow.png" alt="instagram" />
+              <button
+                type="button"
+                class="text-base font-medium border-2 border-primary text-dark bg-light p-2 rounded-md hover:bg-slate-200 active:ring active:ring-orange-300 flex justify-center items-center md:w-1/4"
+              >
+                <div>
+                  <img
+                    src="/assets/icon/ShoppingCart-yellow.png"
+                    alt="cart"
+                    class="w-full h-full"
+                  />
+                </div>
               </button>
             </div>
-          </section>
+          </div>
+        </div>
+        <div class="flex flex-col items-center md:w-[48%] xl:w-full">
+          <img
+            src="/assets/images/product-2.png"
+            alt="product"
+            class="w-full h-full"
+          />
+          <div
+            class="w-[95%] flex flex-col gap-y-3 p-[10px] bg-light drop-shadow-md relative bottom-16"
+          >
+            <span class="text-xl font-medium text-dark lg:text-[22px]"
+              >Hazelnut Latte</span
+            >
+            <p class="text-sm font-normal text-dark">
+              You can explore the menu that we provide with fun and have their
+              own taste and make your day better.
+            </p>
+            <p class="text-lg font-medium text-dark lg:text-[22px]">
+              IDR 20.000
+            </p>
+            <div
+              class="flex flex-col gap-y-2 md:flex-row md:justify-between md:gap-x-2"
+            >
+              <button
+                type="button"
+                class="text-base font-medium text-dark bg-primary p-2 rounded-md hover:bg-amber-600 active:ring active:ring-orange-300 md:w-3/4"
+              >
+                Buy
+              </button>
+              <button
+                type="button"
+                class="text-base font-medium border-2 border-primary text-dark bg-light p-2 rounded-md hover:bg-slate-200 active:ring active:ring-orange-300 flex justify-center items-center md:w-1/4"
+              >
+                <div>
+                  <img
+                    src="/assets/icon/ShoppingCart-yellow.png"
+                    alt="cart"
+                    class="w-full h-full"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center md:w-[48%] xl:w-full">
+          <img
+            src="/assets/images/product-3.png"
+            alt="product"
+            class="w-full h-full"
+          />
+          <div
+            class="w-[95%] flex flex-col gap-y-3 p-[10px] bg-light drop-shadow-md relative bottom-16"
+          >
+            <span class="text-xl font-medium text-dark lg:text-[22px]"
+              >Hazelnut Latte</span
+            >
+            <p class="text-sm font-normal text-dark">
+              You can explore the menu that we provide with fun and have their
+              own taste and make your day better.
+            </p>
+            <p class="text-lg font-medium text-dark lg:text-[22px]">
+              IDR 20.000
+            </p>
+            <div
+              class="flex flex-col gap-y-2 md:flex-row md:justify-between md:gap-x-2"
+            >
+              <button
+                type="button"
+                class="text-base font-medium text-dark bg-primary p-2 rounded-md hover:bg-amber-600 active:ring active:ring-orange-300 md:w-3/4"
+              >
+                Buy
+              </button>
+              <button
+                type="button"
+                class="text-base font-medium border-2 border-primary text-dark bg-light p-2 rounded-md hover:bg-slate-200 active:ring active:ring-orange-300 flex justify-center items-center md:w-1/4"
+              >
+                <div>
+                  <img
+                    src="/assets/icon/ShoppingCart-yellow.png"
+                    alt="cart"
+                    class="w-full h-full"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center md:w-[48%] xl:w-full">
+          <img
+            src="/assets/images/product-4.png"
+            alt="product"
+            class="w-full h-full"
+          />
+          <div
+            class="w-[95%] flex flex-col gap-y-3 p-[10px] bg-light drop-shadow-md relative bottom-16"
+          >
+            <span class="text-xl font-medium text-dark lg:text-[22px]"
+              >Hazelnut Latte</span
+            >
+            <p class="text-sm font-normal text-dark">
+              You can explore the menu that we provide with fun and have their
+              own taste and make your day better.
+            </p>
+            <p class="text-lg font-medium text-dark lg:text-[22px]">
+              IDR 20.000
+            </p>
+            <div
+              class="flex flex-col gap-y-2 md:flex-row md:justify-between md:gap-x-2"
+            >
+              <button
+                type="button"
+                class="text-base font-medium text-dark bg-primary p-2 rounded-md hover:bg-amber-600 active:ring active:ring-orange-300 md:w-3/4"
+              >
+                Buy
+              </button>
+              <button
+                type="button"
+                class="text-base font-medium border-2 border-primary text-dark bg-light p-2 rounded-md hover:bg-slate-200 active:ring active:ring-orange-300 flex justify-center items-center md:w-1/4"
+              >
+                <div>
+                  <img
+                    src="/assets/icon/ShoppingCart-yellow.png"
+                    alt="cart"
+                    class="w-full h-full"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
+    </main>
+    <section
+      class="font-jakartans py-12 px-5 md:px-24 lg:px-[130px] lg:py-10 bg-[#E8E8E84D]"
+    >
+      <div class="items-center text-center flex flex-col gap-y-5">
+        <h1 class="text-2xl font-medium text-dark md:text-5xl">
+          <span class="text-[#8E6447]">Visit Our Store</span> in the Spot on the
+          Map Below
+        </h1>
+        <div class="bg-primary w-12 h-1 lg:w-16 lg:h-2"></div>
+        <span class="text-sm font-normal text-secondary md:text-base md:w-[50%]"
+          >You can explore the menu that we provide with fun and have their own
+          taste and make your day better.</span
+        >
+      </div>
+      <div class="mt-16">
+        <img src="assets/images/map.png" alt="map" class="w-full h-full" />
+      </div>
+    </section>
+    <section
+      class="font-jakartans py-12 px-5 md:px-24 lg:px-[130px] lg:py-10 bg-gradient-to-br from-[#777c82_-114.74%] to-[#0b0909_91.35%]"
+    >
+      <div class="flex flex-col gap-y-4 md:gap-x-5 lg:flex-row lg:items-center">
+        <div class="lg:w-1/2">
+          <img
+            src="/assets/images/testimonial-section.png"
+            alt="profile-image-testimonial"
+            class="w-full h-full lg:w-auto lg:h-auto"
+          />
+        </div>
+        <div class="flex flex-col gap-y-4 md:gap-y-6 lg:w-1/2">
+          <span class="text-sm md:text-base font-normal text-light"
+            >TESTIMONIAL</span
+          >
+          <div class="flex gap-x-5 items-center">
+            <div class="bg-primary w-1 h-10 md:w-2 md:h-16 xl:block"></div>
+            <h1
+              class="text-2xl font-medium leading-tight text-light text-center md:text-5xl xl:text-left"
+            >
+              Viezh Robert
+            </h1>
+          </div>
+          <span class="text-sm md:text-base font-normal text-primary"
+            >Manager Coffee Shop</span
+          >
+          <span class="text-sm md:text-base font-normal text-light">
+            “Wow... I am very happy to spend my whole day here. the Wi-fi is
+            good, and the coffee and meals tho. I like it here!! Very
+            recommended!
+          </span>
+          <div class="self-baseline">
+            <img
+              src="/assets/icon/stars.png"
+              alt="star"
+              class="w-full h-full"
+            />
+          </div>
+          <div class="flex gap-x-3 self-baseline">
+            <img src="/assets/icon/arrow-left.png" alt="arrow-left" />
+            <img src="/assets/icon/arrow-right.png" alt="arrow-right" />
+          </div>
+          <div class="self-baseline">
+            <img
+              src="/assets/icon/carousel.png"
+              alt="paginate"
+              class="w-full h-full"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="font-jakartans p-5 mt-5 flex flex-wrap gap-y-8 sm:px-5 md:px-24 pt md:pt-10 md:pb-20 md:mt-10 lg:px-[130px]"
+    >
+      <section
+        class="flex flex-col gap-y-6 w-full lg:self-end lg:w-2/5 lg:pr-16"
+      >
+        <img src="/assets/images/brand.png" alt="logo" class="w-32 h-8" />
+        <span class="text-base font-normal text-secondary">
+          Coffee Shop is a store that sells some good meals, and especially
+          coffee. We provide high quality beans
+        </span>
+        <span class="font-rubik text-base font-semibold text-dark"
+          >&copy;2020CoffeeStore</span
+        >
+      </section>
+      <div class="mid flex gap-x-[7rem] md:h-2 md:w-auto">
+        <section
+          class="flex flex-col gap-y-5 w-full sm:w-1/3 md:auto lg:w-auto"
+        >
+          <p class="text-base font-medium text-dark">Product</p>
+          <p class="text-sm font-normal text-secondary">Our Product</p>
+          <p class="text-sm font-normal text-secondary">Pricing</p>
+          <p class="text-sm font-normal text-secondary">Locations</p>
+          <p class="text-sm font-normal text-secondary">Countries</p>
+          <p class="text-sm font-normal text-secondary">Blog</p>
+        </section>
+        <section
+          class="flex flex-col gap-y-5 w-full sm:w-1/3 md:auto lg:w-auto"
+        >
+          <p class="text-base font-medium text-dark">Engage</p>
+          <p class="text-sm font-normal text-secondary">Partner</p>
+          <p class="text-sm font-normal text-secondary">FAQ</p>
+          <p class="text-sm font-normal text-secondary">About Us</p>
+          <p class="text-sm font-normal text-secondary">Provice Policy</p>
+          <p class="text-sm font-normal text-secondary">Term of Services</p>
+        </section>
+      </div>
+      <section
+        class="social-media w-full sm:w-1/3 md:auto lg:w-auto lg:ms-[4rem]"
+      >
+        <p class="text-base font-medium text-dark mb-4">Social Media</p>
+        <div class="flex gap-5">
+          <div>
+            <img
+              src="/assets/icon/facebook-yellow.png"
+              alt="Facebook"
+              class="shadow-xl"
+            />
+          </div>
+          <div>
+            <img
+              src="/assets/icon/twitter-yellow.png"
+              alt="Twitter"
+              class="shadow-xl"
+            />
+          </div>
+          <div>
+            <img
+              src="/assets/icon/instagram-yellow.png"
+              alt="Instagram"
+              class="shadow-xl"
+            />
+          </div>
+        </div>
+      </section>
     </footer>
   </body>
+  <script>
+    const burgerMenu = document.getElementById("burger-menu");
+    const dropdownMobile = document.getElementById("dropdown-mobile");
+    burgerMenu.addEventListener("click", (e) => {
+      dropdownMobile.classList.toggle("hidden");
+    });
+  </script>
 </html>
